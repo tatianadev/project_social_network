@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+    <script>
+        const check_password = function (event) {
+            const input1 = document.getElementById('login-form-password');
+            const input2 = document.getElementById('login-form-confirm-password');
+            if (input1.value !== input2.value) {
+                event.stopImmediatePropagation();
+                event.preventDefault();
+                alert("Password values are different!")
+            }
+
+        }
+    </script>
+    <div class='main'><h3>Please enter your details to sign up:</h3>
+        {% if error %}
+            <h3>{{ error }}</h3>
+        {% endif %}
+        <form method='POST' action="/social/register/" onsubmit="check_password(event)">
+
+            {% csrf_token %}
+            <span class='fieldname'>Username:</span>
+            <input type='text' required maxlength='16' id='user' name='user'>
+            <span id='info'></span>
+            <br>
+            <span class='fieldname'>Password:</span>
+            <input id="login-form-password" type='password' required maxlength='16' name='pass'>
+            <span class='fieldname'></span>
+            <br>
+            <span class='fieldname'>Confirm password:</span>
+            <input id="login-form-confirm-password" type='password' required maxlength='16' name='pass_confirm'><br>
+            <span class='fieldname'></span>
+
+
+            <input type='submit' value='Sign up'>
+
+
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class='main'>
+
+{% if followers %}
+    <b>Your friends:</b><br>
+	{% for member in followers %}
+        {% if member in following%}
+            <a href="/social/members/?view={{ member.username }}"> {{ member.username }} </a>
+        {% endif %}
+        <br>
+	{% endfor %}
+{% endif %}
+        <br>
+
+{% if followers %}
+    <b>Your followers:</b>
+	{% for member in followers %}
+        {% if member not in following%}
+            <a href="/social/members/?view={{ member.username }}"> {{ member.username }} </a>
+        {% endif %}
+        <br>
+	{% endfor %}
+{% endif %}
+        <br>
+
+{% if following %}
+    <b>You are following</b>:
+	{% for member in following %}
+        {% if member not in followers%}
+		        <a href="/social/members/?view={{ member.username }}"> {{ member.username }} </a>
+        {% endif %}
+        <br>
+	{% endfor %}
+{% endif %}
+
+
+</div>
+{% endblock %}

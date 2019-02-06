@@ -1,0 +1,137 @@
+/* styles.css */
+
+* {
+  font-family:verdana,sans-serif;
+  font-size  :14pt;
+}
+
+body {
+  max-width :500px;
+  margin    :20px auto;
+  background:#f8f8f8;
+  border    :1px solid #888;
+}
+
+html {
+  background:#fff
+}
+
+img {
+  border            :1px solid black;
+  margin-right      :15px;
+  -moz-box-shadow   :2px 2px 2px #888;
+  -webkit-box-shadow:2px 2px 2px #888;
+  box-shadow        :2px 2px 2px #888;
+}
+
+li a, .button {
+  text-decoration:none;
+}
+
+li a:hover, .button:hover {
+  color:white;
+}
+ 
+.appname {
+  text-align :center;
+  background :#eb8;
+  color      :#285473 !important;
+  font-family:helvetica;
+  font-size  :20pt;
+  padding    :4px;
+}
+
+.fieldname {
+  float:left;
+  width:120px;
+}
+
+.main {
+  display: block;
+  text-align: center;
+}
+
+.info {
+  background :lightgreen;
+  color      :blue;
+	border     :1px solid green;
+	padding    :5px 10px;
+  margin-left:40px;
+}
+
+.menu {padding: 0;}
+
+.menu li, .button {
+  /*display           :inline;*/
+  padding           :4px 6px;
+  /*border            :1px solid #777;*/
+  background        :#ddd;
+	color             :#285473;
+  margin-right      :8px;
+	border-radius     :5px;
+	-moz-box-shadow   :2px 2px 2px #888;
+	-webkit-box-shadow:2px 2px 2px #888;
+	box-shadow        :2px 2px 2px #888;
+  list-style-type: none;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.menu li:hover {
+  background:#4a76a8;
+  color: #fff;
+}
+
+.menu a {
+  color:#285473;
+  text-decoration: none;
+}
+
+
+.warning {
+  background :#D50022;
+  color      :white;
+  border     :1px solid white;
+  padding    :5px 10px;
+  margin-left:40px;
+}
+
+.subhead {
+  font-weight:bold;
+}
+
+.taken, .error {
+  color:red;
+}
+
+.available {
+  color:green;
+}
+
+.whisper {
+  font-style:italic;
+  color     :#006600;
+}
+
+#logo {
+  font-family:Georgia;
+  font-weight:bold;
+  font-style:italic;
+  font-size :97px;
+}
+
+#messages {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+td {
+	background-color: #b0e0e6;
+}

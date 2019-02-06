@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Billiard social</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+</head>
+<body>
+	<canvas id='logo' width='624' height='96'> {{ appname }} </canvas>
+	{% if loggedin %}
+    <div class='appname'>{{ appname }}(User:{{ username }}) </div>
+	{% else %}
+    <div class='appname'>{{ appname }}</div>
+    {% endif %}
+
+	<br>
+	<ul class='menu'>
+		{% if loggedin %}
+        <a href='/social/members/?view={{ username }}'><li>Home</li></a>
+        <a href='/social/members/'><li>Members</li></a>
+        <a href='/social/friends/'><li>Friends</li></a>
+        <a href='/social/profile/'><li>Edit Profile</li></a>
+        <a href='/social/logout/'><li>Log out</li></a><br>
+		{% else %}
+		<a href='/social/'><li>Home</li></a>
+		<a href='/social/signup/'><li>Signup</li></a>
+		<a href='/social/login/'><li>Log in</li></a>
+		{% endif %}
+	</ul>
+	<br>
+	{% block content %}
+	{% endblock %}
+	<br>
+</body>
+</html>

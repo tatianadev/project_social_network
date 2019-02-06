@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% if error %}
+        <div>
+            <span class='warning'>{{ error }}</span>
+        </div>
+    {% endif %}
+    <br/>
+    <span class='main'>
+	Welcome to {{ appname }}, please sign up or log.
+</span>
+    <br/>
+{% endblock %}
