@@ -10,7 +10,7 @@
 		{% if member in followers %}
 			&harr; friend [<a href="?remove={{ member.username }}">remove from friends</a>] <br>
 		{% else %}
-			&larr; you are following [<a href="?remove={{ member.username }}">drop</a>]<br>
+			&larr; you are following [<a href="?remove={{ member.username }}">unfollow</a>]<br>
 		{% endif %}
 	{% else %}
 		{% if member in followers %}
