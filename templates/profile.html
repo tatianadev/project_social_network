@@ -4,15 +4,15 @@
 <div class='main'>
 {% if text %}
 <h3>Your Profile</h3>
-{{ text }} <br style='clear:left;'><br>
+{{ text }}
 {% endif %}
 <form method='POST' action='/social/profile/' enctype='multipart/form-data'>
    	{% csrf_token %}
 	<h3>Enter or edit your details:</h3>
 	<textarea name='text' cols='50' rows='3'>{{ text }}</textarea><br>
 	<input type='submit' value='Save Profile'>
-
 </form>
+<br>
 </div>
 {% endblock %}
 

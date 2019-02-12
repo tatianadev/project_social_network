@@ -27,5 +27,5 @@ urlpatterns = [
     path('social/profile/', views.profile, name='profile'),
     path('social/members/', views.members, name='members'),
     path('social/friends/', views.friends, name='friends'),
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
 ]

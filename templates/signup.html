@@ -22,22 +22,15 @@
         <form method='POST' action="/social/register/" onsubmit="check_password(event)">
 
             {% csrf_token %}
-            <span class='fieldname'>Username:</span>
+            <span class='fieldname'>Enter username:</span>
             <input type='text' required maxlength='16' id='user' name='user'>
-            <span id='info'></span>
             <br>
-            <span class='fieldname'>Password:</span>
+            <span class='fieldname'>Enter password:</span>
             <input id="login-form-password" type='password' required maxlength='16' name='pass'>
-            <span class='fieldname'></span>
             <br>
             <span class='fieldname'>Confirm password:</span>
             <input id="login-form-confirm-password" type='password' required maxlength='16' name='pass_confirm'><br>
-            <span class='fieldname'></span>
-
-
             <input type='submit' value='Sign up'>
-
-
         </form>
     </div>
 {% endblock %}

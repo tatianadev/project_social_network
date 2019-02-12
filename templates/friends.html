@@ -1,40 +1,47 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class='main'>
+    <div class='main'>
 
-{% if followers %}
-    <b>Your friends:</b><br>
-	{% for member in followers %}
-        {% if member in following%}
-            <a href="/social/members/?view={{ member.username }}"> {{ member.username }} </a>
+        <b>Your friends:</b>
+        <br>
+        {% if followers %}
+            {% for member in followers %}
+                {% if member in following %}
+                    <a href="/social/members/?view={{ member.username }}"> {{ member.username }} </a>
+                    <br>
+                {% endif %}
+            {% endfor %}
         {% endif %}
         <br>
-	{% endfor %}
-{% endif %}
-        <br>
 
-{% if followers %}
-    <b>Your followers:</b>
-	{% for member in followers %}
-        {% if member not in following%}
-            <a href="/social/members/?view={{ member.username }}"> {{ member.username }} </a>
+
+        <b>Your followers:</b>
+        <br>
+        {% if followers %}
+            {% for member in followers %}
+                {% if member not in following %}
+                    <a href="/social/members/?view={{ member.username }}"> {{ member.username }} </a>
+                    <br>
+                {% endif %}
+            {% endfor %}
         {% endif %}
         <br>
-	{% endfor %}
-{% endif %}
+
+
+        <b>You are following:</b>
         <br>
 
-{% if following %}
-    <b>You are following</b>:
-	{% for member in following %}
-        {% if member not in followers%}
-		        <a href="/social/members/?view={{ member.username }}"> {{ member.username }} </a>
+        {% if following %}
+            {% for member in following %}
+                {% if member not in followers %}
+                    <a href="/social/members/?view={{ member.username }}"> {{ member.username }} </a>
+                    <br>
+                {% endif %}
+            {% endfor %}
         {% endif %}
         <br>
-	{% endfor %}
-{% endif %}
 
 
-</div>
+    </div>
 {% endblock %}

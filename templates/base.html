@@ -6,7 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
 </head>
 <body>
-	<canvas id='logo' width='624' height='96'> {{ appname }} </canvas>
+	<br>
+    <div id='logo'><img src="{% static 'billiards.jpg' %}"></div>
 	{% if loggedin %}
     <div class='appname'>{{ appname }}(User:{{ username }}) </div>
 	{% else %}

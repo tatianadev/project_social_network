@@ -10,6 +10,7 @@ body {
   margin    :20px auto;
   background:#f8f8f8;
   border    :1px solid #888;
+  padding: 15px;
 }
 
 html {
@@ -42,8 +43,8 @@ li a:hover, .button:hover {
 }
 
 .fieldname {
-  float:left;
-  width:120px;
+  margin-bottom: 5px;
+  text-align: right;
 }
 
 .main {
@@ -56,18 +57,20 @@ li a:hover, .button:hover {
   color      :blue;
 	border     :1px solid green;
 	padding    :5px 10px;
-  margin-left:40px;
+  margin:0px auto;
+  display: block;
+  width: 70%;
+  text-align: center;
 }
 
 .menu {padding: 0;}
 
 .menu li, .button {
   /*display           :inline;*/
-  padding           :4px 6px;
   /*border            :1px solid #777;*/
   background        :#ddd;
 	color             :#285473;
-  margin-right      :8px;
+  padding: 4px 6px;
 	border-radius     :5px;
 	-moz-box-shadow   :2px 2px 2px #888;
 	-webkit-box-shadow:2px 2px 2px #888;
@@ -83,8 +86,11 @@ li a:hover, .button:hover {
 }
 
 .menu a {
+  display: block;
   color:#285473;
   text-decoration: none;
+  width: 100%;
+  padding: 4px 6px;
 }
 
 
@@ -113,11 +119,8 @@ li a:hover, .button:hover {
   color     :#006600;
 }
 
-#logo {
-  font-family:Georgia;
-  font-weight:bold;
-  font-style:italic;
-  font-size :97px;
+#logo img{
+  width: 100%;
 }
 
 #messages {
@@ -134,4 +137,19 @@ table {
 
 td {
 	background-color: #b0e0e6;
+}
+
+input {
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+span {
+  font-size: 14px;
+}
+
+input [type="submit"] {
+  background        :#ddd;
+  color             :#285473;
 }

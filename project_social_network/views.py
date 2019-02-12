@@ -146,7 +146,6 @@ def profile(request):
             'error': "You are not logged in, no access to profile page!"
         })
 
-
 def member(request, view_user):
     if 'username' in request.session:
         username = request.session['username']
